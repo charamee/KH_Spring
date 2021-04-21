@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 이게 객체를 만들어주는것 -->
+	<bean id="lg" class="com.test07.LgTv" lazy-init="true"></bean>
+	<bean id="samsong" class="com.test07.SamsongTv" lazy-init="false"></bean>
+	<!-- lazy-init : false : 빈팩토리가 시작될때 객체를 만들어준다 true: 호출되는 시점에서 객체가 생성된다 -->
+	<!-- true 일때는 호출하면 객체 생성해주고 , 만약 둘다 false 일때는 작성해준 순서대로 lg 먼저 samsong 나중에 객체 생성하고 
+	lg가 true samsong이 false 일때는 samsong 객체 생성 후 lg 객체를 호출해주니까 나중에 생성 (호출되는 시점에서)  -->
+	
+
+</beans>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="singleton" class="com.test01.AbstractTest" factory-method="getInstance"></bean>
+	<!-- AbsractTest singleton = AbstractTest.getInstance(); 와 같은것이다 -->
+	<!-- factory-method="getInstance" 얘가 객체를 생성해준다? -->
+
+</beans>
