@@ -1,0 +1,42 @@
+_update
+01. web.xml : 2.5 -> 4.0 (new dynamic web project -> web module������ 4.0, deploy descriptor ����)
+02. pom.xml
+	java					: 1.6 -> 11
+	spring-framework 		: 3.1.1.RELEASE -> 5.3.6
+	servlet-api				: 2.5 -> 4.0.1 (servlet-api -> javax.servlet-api)
+	jsp-api					: 2.1 -> 2.3.3 (jsp-api -> javax.servlet.jsp-api)
+	maven-compiler-plugin	: 1.6 -> 11 (source/target)
+03. project facets
+	dynamic web module 		: 2.5 -> 4.0
+	java					: 1.6 -> 11
+04. maven update
+
+_jdbc
+05. pom.xml : spring-jdbc, ojdbc6
+06. web.xml : applicationContext.xml, *.do, encodingFilter
+07. src/main/resources/sqls/
+	db.properties
+	jdbc.sql
+08. WEB-INF/spring/appServlet/applicationContext.xml
+09. dto, dao, biz, controller
+
+_Javaconfig 
+10. com/mvc/update/config/ApplicationConfig
+11. com/mvc/update/config/ServletConfig (impl WEbMvcConfigurer)
+12. web.xml
+
+contextConfigLocation -> 밸류값 변경해주고 
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+	</context-param>
+얘를 추가해준다 얘가 우리가 만든 aaplicationCOnfig에서 사용한 어노테이션을 찾을 수 있게 해줌 
+
+13. WEB-INF/spring/appServlet 폴더 삭제 
+14. com/mvc/update/config/WebConfig(impl WebApplicationInitializer) 
+15.pom.xml : failOnMissingWebXml -> false
+
+
+
+
+
